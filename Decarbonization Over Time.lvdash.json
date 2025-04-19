@@ -1,0 +1,128 @@
+{
+  "datasets" : [ {
+    "name" : "c933189b",
+    "displayName" : "decarbonization_trends",
+    "query" : "SELECT * FROM workspace.my_pudl_data.decarbonization_trends"
+  } ],
+  "pages" : [ {
+    "name" : "040b548e",
+    "displayName" : "Untitled page",
+    "layout" : [ {
+      "widget" : {
+        "name" : "5b88ed75",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "sum(total_co2_tons)",
+              "expression" : "SUM(`total_co2_tons`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "sum(total_co2_tons)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Sum of total_co2_tons"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Total CO2 Emissions Over Time by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "70e92912",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "avg(renewable_capacity_fraction)",
+              "expression" : "AVG(`renewable_capacity_fraction`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "temporal"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "avg(renewable_capacity_fraction)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Average renewable_capacity_fraction"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Renewable Capacity Fraction in each State over time\n",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    } ]
+  } ]
+}
