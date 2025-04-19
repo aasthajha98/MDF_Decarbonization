@@ -60,14 +60,14 @@
         }
       },
       "position" : {
-        "x" : 0,
-        "y" : 0,
+        "x" : 3,
+        "y" : 1,
         "width" : 3,
-        "height" : 6
+        "height" : 9
       }
     }, {
       "widget" : {
-        "name" : "70e92912",
+        "name" : "9e114f85",
         "queries" : [ {
           "name" : "main_query",
           "query" : {
@@ -79,10 +79,13 @@
               "name" : "year",
               "expression" : "`year`"
             }, {
-              "name" : "avg(renewable_capacity_fraction)",
-              "expression" : "AVG(`renewable_capacity_fraction`)"
+              "name" : "renewable_capacity_mw",
+              "expression" : "`renewable_capacity_mw`"
             } ],
-            "disaggregated" : false
+            "filters" : [ {
+              "expression" : "`year` IN (2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001)"
+            } ],
+            "disaggregated" : true
           }
         } ],
         "spec" : {
@@ -92,16 +95,16 @@
             "x" : {
               "fieldName" : "year",
               "scale" : {
-                "type" : "temporal"
+                "type" : "quantitative"
               },
               "displayName" : "year"
             },
             "y" : {
-              "fieldName" : "avg(renewable_capacity_fraction)",
+              "fieldName" : "renewable_capacity_mw",
               "scale" : {
                 "type" : "quantitative"
               },
-              "displayName" : "Average renewable_capacity_fraction"
+              "displayName" : "renewable_capacity_mw"
             },
             "color" : {
               "fieldName" : "state",
@@ -112,8 +115,105 @@
             }
           },
           "frame" : {
-            "title" : "Renewable Capacity Fraction in each State over time\n",
+            "title" : "Tota Renewable capacity over time",
             "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "4e715f5a",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "num_emitting_plants",
+              "expression" : "`num_emitting_plants`"
+            } ],
+            "filters" : [ {
+              "expression" : "`year` IN (2023)"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "bar",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            },
+            "y" : {
+              "fieldName" : "num_emitting_plants",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "num_emitting_plants"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "showTitle" : true,
+            "title" : "Number of Emitting Plants by State"
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 6,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "0539a74c",
+        "queries" : [ {
+          "name" : "dashboards/01f01cb1557c145fb21dcb8fdc9bfe4c/datasets/01f01cb176fe13c7b1f96ffc0fc47811_state",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "state_associativity",
+              "expression" : "COUNT_IF(`associative_filter_predicate_group`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 2,
+          "widgetType" : "filter-single-select",
+          "encodings" : {
+            "fields" : [ {
+              "fieldName" : "state",
+              "displayName" : "state",
+              "queryName" : "dashboards/01f01cb1557c145fb21dcb8fdc9bfe4c/datasets/01f01cb176fe13c7b1f96ffc0fc47811_state"
+            } ]
+          },
+          "frame" : {
+            "showTitle" : true,
+            "title" : ""
           }
         }
       },
@@ -121,7 +221,7 @@
         "x" : 3,
         "y" : 0,
         "width" : 3,
-        "height" : 6
+        "height" : 1
       }
     } ]
   } ]
