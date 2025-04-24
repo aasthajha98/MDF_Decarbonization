@@ -274,7 +274,7 @@
               "scale" : {
                 "type" : "quantitative"
               },
-              "displayName" : "renewable_capacity_mw"
+              "displayName" : "Renewable Capacity"
             },
             "color" : {
               "fieldName" : "state",
@@ -377,7 +377,7 @@
                   "min" : 0
                 }
               },
-              "displayName" : "renewable_generation_mwh"
+              "displayName" : "Renewable Generation"
             },
             "color" : {
               "fieldName" : "state",
@@ -449,7 +449,7 @@
                   "min" : 0
                 }
               },
-              "displayName" : "coal_generation_mwh"
+              "displayName" : "Coal Generation mwh"
             },
             "color" : {
               "fieldName" : "state",
@@ -507,7 +507,7 @@
               "scale" : {
                 "type" : "quantitative"
               },
-              "displayName" : "gas_generation_mwh"
+              "displayName" : "Gas Generation mwh"
             },
             "color" : {
               "fieldName" : "state",
