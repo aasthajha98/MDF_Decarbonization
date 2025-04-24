@@ -1,0 +1,710 @@
+{
+  "datasets" : [ {
+    "name" : "c933189b",
+    "displayName" : "decarbonization_trends",
+    "query" : "SELECT * FROM workspace.my_pudl_data.decarbonization_trends"
+  } ],
+  "pages" : [ {
+    "name" : "040b548e",
+    "displayName" : "Emissions",
+    "layout" : [ {
+      "widget" : {
+        "name" : "5b88ed75",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "sum(total_co2_tons)",
+              "expression" : "SUM(`total_co2_tons`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "sum(total_co2_tons)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Total CO2 Tons"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "State"
+            }
+          },
+          "frame" : {
+            "title" : "Total CO2 Emissions Over Time by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 1,
+        "width" : 3,
+        "height" : 10
+      }
+    }, {
+      "widget" : {
+        "name" : "9e114f85",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "yoy_co2_change_pct",
+              "expression" : "`yoy_co2_change_pct`"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "yoy_co2_change_pct",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Percent Change"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Tota Year-Over-Year Percent Change in CO2",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 1,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "4e715f5a",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "num_emitting_plants",
+              "expression" : "`num_emitting_plants`"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "num_emitting_plants",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Number of Plants Emitting CO2"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Number of Emitting Plants by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 7,
+        "width" : 3,
+        "height" : 4
+      }
+    }, {
+      "widget" : {
+        "name" : "0539a74c",
+        "queries" : [ {
+          "name" : "dashboards/01f01fe34d371c38a074bdf5d8e55143/datasets/01f01fe34d3815fbb1f423efad12cf6a_state",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "state_associativity",
+              "expression" : "COUNT_IF(`associative_filter_predicate_group`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 2,
+          "widgetType" : "filter-single-select",
+          "encodings" : {
+            "fields" : [ {
+              "fieldName" : "state",
+              "displayName" : "state",
+              "queryName" : "dashboards/01f01fe34d371c38a074bdf5d8e55143/datasets/01f01fe34d3815fbb1f423efad12cf6a_state"
+            } ]
+          },
+          "frame" : {
+            "showTitle" : true,
+            "title" : "State"
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 1
+      }
+    }, {
+      "widget" : {
+        "name" : "268db195",
+        "textbox_spec" : "CO2 Emissions Metrics by State"
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 1
+      }
+    } ]
+  }, {
+    "name" : "3a638dd6",
+    "displayName" : "Generation Capacity",
+    "layout" : [ {
+      "widget" : {
+        "name" : "59863db7",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "renewable_capacity_mw",
+              "expression" : "`renewable_capacity_mw`"
+            } ],
+            "filters" : [ {
+              "expression" : "`year` IN (2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002, 2001)"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "renewable_capacity_mw",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "renewable_capacity_mw"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Tota Renewable capacity over time",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 1,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "480d61c2",
+        "queries" : [ {
+          "name" : "dashboards/01f01fe34d371c38a074bdf5d8e55143/datasets/01f01fe34d3815fbb1f423efad12cf6a_state",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "state_associativity",
+              "expression" : "COUNT_IF(`associative_filter_predicate_group`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 2,
+          "widgetType" : "filter-single-select",
+          "encodings" : {
+            "fields" : [ {
+              "fieldName" : "state",
+              "displayName" : "state",
+              "queryName" : "dashboards/01f01fe34d371c38a074bdf5d8e55143/datasets/01f01fe34d3815fbb1f423efad12cf6a_state"
+            } ]
+          },
+          "frame" : {
+            "showTitle" : true,
+            "title" : "State"
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 1
+      }
+    }, {
+      "widget" : {
+        "name" : "e018dd3f",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "renewable_generation_mwh",
+              "expression" : "`renewable_generation_mwh`"
+            } ],
+            "filters" : [ {
+              "expression" : "`year` IN (2023, 2000, 2001, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008, 2007, 2006, 2005, 2004, 2003, 2002)"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "renewable_generation_mwh",
+              "scale" : {
+                "type" : "quantitative",
+                "domain" : {
+                  "min" : 0
+                }
+              },
+              "displayName" : "renewable_generation_mwh"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Renewable Generation Capacity Over Time by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 1,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "92e14a15",
+        "textbox_spec" : ""
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 1
+      }
+    }, {
+      "widget" : {
+        "name" : "fd701082",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "coal_generation_mwh",
+              "expression" : "`coal_generation_mwh`"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "coal_generation_mwh",
+              "scale" : {
+                "type" : "quantitative",
+                "domain" : {
+                  "min" : 0
+                }
+              },
+              "displayName" : "coal_generation_mwh"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Coal Generation Over Time by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 7,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "2bc58cb7",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "gas_generation_mwh",
+              "expression" : "`gas_generation_mwh`"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "gas_generation_mwh",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "gas_generation_mwh"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Gas Generation (MWh) Over Time by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 7,
+        "width" : 3,
+        "height" : 6
+      }
+    } ]
+  }, {
+    "name" : "4e5f9069",
+    "displayName" : "Consumption",
+    "layout" : [ {
+      "widget" : {
+        "name" : "22d64cf4",
+        "textbox_spec" : "Fossil Fuel Consumption Metrics by State"
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 0,
+        "width" : 3,
+        "height" : 1
+      }
+    }, {
+      "widget" : {
+        "name" : "348d932d",
+        "queries" : [ {
+          "name" : "dashboards/01f01fe34d371c38a074bdf5d8e55143/datasets/01f01fe34d3815fbb1f423efad12cf6a_state",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "state_associativity",
+              "expression" : "COUNT_IF(`associative_filter_predicate_group`)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 2,
+          "widgetType" : "filter-single-select",
+          "encodings" : {
+            "fields" : [ {
+              "fieldName" : "state",
+              "displayName" : "state",
+              "queryName" : "dashboards/01f01fe34d371c38a074bdf5d8e55143/datasets/01f01fe34d3815fbb1f423efad12cf6a_state"
+            } ]
+          },
+          "frame" : {
+            "showTitle" : true,
+            "title" : "State"
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 0,
+        "width" : 3,
+        "height" : 1
+      }
+    }, {
+      "widget" : {
+        "name" : "b9932cb0",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "coal_consumed_mmbtu",
+              "expression" : "`coal_consumed_mmbtu`"
+            } ],
+            "filters" : [ {
+              "expression" : "`year` IN (2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008)"
+            } ],
+            "disaggregated" : true
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "coal_consumed_mmbtu",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "coal_consumed_mmbtu"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Coal Consumed MMBtu Over Time by State",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 1,
+        "width" : 3,
+        "height" : 6
+      }
+    }, {
+      "widget" : {
+        "name" : "66fd912a",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "c933189b",
+            "fields" : [ {
+              "name" : "state",
+              "expression" : "`state`"
+            }, {
+              "name" : "year",
+              "expression" : "`year`"
+            }, {
+              "name" : "sum(gas_consumed_mmbtu)",
+              "expression" : "SUM(`gas_consumed_mmbtu`)"
+            } ],
+            "filters" : [ {
+              "expression" : "`year` IN (2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010, 2009, 2008)"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "line",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "year",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "year"
+            },
+            "y" : {
+              "fieldName" : "sum(gas_consumed_mmbtu)",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "Sum of gas_consumed_mmbtu"
+            },
+            "color" : {
+              "fieldName" : "state",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "state"
+            }
+          },
+          "frame" : {
+            "title" : "Gas Consumed (MMBTU) by Year for All States",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 3,
+        "y" : 1,
+        "width" : 3,
+        "height" : 6
+      }
+    } ]
+  } ]
+}
