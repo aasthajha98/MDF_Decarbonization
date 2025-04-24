@@ -6,7 +6,7 @@
   } ],
   "pages" : [ {
     "name" : "040b548e",
-    "displayName" : "Untitled page",
+    "displayName" : "Overview",
     "layout" : [ {
       "widget" : {
         "name" : "5b88ed75",
@@ -63,7 +63,7 @@
         "x" : 3,
         "y" : 1,
         "width" : 3,
-        "height" : 9
+        "height" : 11
       }
     }, {
       "widget" : {
