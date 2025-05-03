@@ -46,7 +46,9 @@ Data is pulled from the **Public Utility Data Liberation Project (PUDL)**, which
 
 ---
 ## Data Processing Overview
+
 This project leverages the Public Utility Data Liberation Project (PUDL) dataset to track decarbonization trends across U.S. states. The data processing pipeline begins with ingesting large-scale energy generation and emissions data from multiple sources, including hourly emissions data, fuel receipts, and plant-level generation statistics. These datasets are cleaned, transformed, and aggregated to generate insights into state-level emissions, energy generation, and renewable capacity. The pipeline is built to scale, allowing for incremental updates and real-time dashboard integration. This approach ensures up-to-date, accurate, and comprehensive analysis of decarbonization efforts in the energy sector.
+
 ---
 
 ## 📈 Example Questions Answered
