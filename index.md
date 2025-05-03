@@ -1,5 +1,3 @@
-theme: jekyll-theme-cayman
-
 # Tracking State-Level Decarbonization
 
 Welcome to our PPOL 5206 final project! We use open-source utility data from the [Public Utility Data Liberation Project (PUDL)](https://catalyst.coop/pudl/) to track how U.S. states are progressing in decarbonizing their electricity generation over time.
