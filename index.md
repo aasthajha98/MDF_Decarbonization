@@ -13,5 +13,10 @@ Welcome to our PPOL 5206 final project! We use open-source utility data from the
 ## 📌 Why This Matters
 States are making uneven progress toward decarbonization. With federal incentives and climate targets in place, this dashboard helps track which states are leading and which may need policy support.
 
+## 🌍 CO₂ Emissions Animation
+
+<iframe src="./docs/co2_animation.html" width="100%" height="600px" frameborder="0"></iframe>
+
+
 ## 📬 Contact
 Project by students in PPOL 5206. For inquiries, reach out via [GitHub issues](https://github.com/your-username/your-repo/issues).
