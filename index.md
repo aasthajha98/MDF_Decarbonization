@@ -57,7 +57,7 @@ This project leverages the Public Utility Data Liberation Project (PUDL) dataset
 
 ## 🌍 CO₂ Emissions Animation
 
-<iframe src="./animations/co2_emissions_animation_2.html" width="100%" height="100vh" frameborder="0"></iframe>
+<iframe src="./animations/co2_emissions_animation_2.html" width="100%" height="1400px" frameborder="0"></iframe>
 
 
 ## 📬 Contact
