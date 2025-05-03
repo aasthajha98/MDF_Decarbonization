@@ -15,7 +15,7 @@ States are making uneven progress toward decarbonization. With federal incentive
 
 ## 🌍 CO₂ Emissions Animation
 
-<iframe src="./docs/co2_animation.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="./co2_animation.html" width="100%" height="600px" frameborder="0"></iframe>
 
 
 ## 📬 Contact
