@@ -2,6 +2,11 @@
 
 This project analyzes decarbonization trends in the United States using data from the **Public Utility Data Liberation Project (PUDL)**. It focuses on tracking electricity generation and associated carbon emissions by state over time, enabling data-driven insights into how different states are progressing toward cleaner energy portfolios.
 
+As global energy demand continues to rise alongside increasing carbon dioxide emissions, most Americans believe that the United States should focus on advancing renewable energy sources like wind and solar. They also support efforts to move the country toward achieving carbon neutrality by 2050.
+
+The United Nations Intergovernmental Panel on Climate Change highlights that limiting global warming to 1.5°C will necessitate a reduction in carbon dioxide emissions by approximately 45% from 2010 levels by 2030, and achieving net-zero emissions by 2050.
+
+
 ---
 
 ## 📁 Project Files and Descriptions
