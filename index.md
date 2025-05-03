@@ -54,7 +54,7 @@ Data is pulled from the **Public Utility Data Liberation Project (PUDL)**, which
 
 ## 🌍 CO₂ Emissions Animation
 
-<iframe src="./co2_animation.html" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="./animations/co2_emissions_animation_2.html" width="100%" height="600px" frameborder="0"></iframe>
 
 
 ## 📬 Contact
