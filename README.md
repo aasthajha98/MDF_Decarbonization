@@ -40,7 +40,8 @@ This notebook uses the `decarbonization_trends` table to create visualizations t
 
 ---
 
-### `co2_animation.html`
+### Animations 
+`co2_emissions_animation.html`
 An interactive animation (rendered in HTML) showing the change in state-level CO₂ emissions from electricity generation over time. This helps visualize decarbonization dynamics across the country.
 
 ---
