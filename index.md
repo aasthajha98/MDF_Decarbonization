@@ -60,9 +60,9 @@ This project leverages the Public Utility Data Liberation Project (PUDL) dataset
 
 <iframe src="./animations/co2_emissions_animation_2.html" width="100%" height="1000px" frameborder="0"></iframe>
 
-## CO₂ Emissions Map
+## Annual CO₂ Emissions by State Over Time (Map) 
 
-<iframe src="./animations/co2_emissions_animation_map.html" width="100%" height="1000px" frameborder="0"></iframe>
+<iframe src="./animations/co2_emissions_animation_map.html" width="100%" height="600px" frameborder="0"></iframe>
 
 ## Policy Implications 
 
