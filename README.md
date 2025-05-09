@@ -57,8 +57,6 @@ A JSON configuration file for a **Databricks dashboard**. The dashboard includes
 - Emissions intensity (tons CO₂ per MWh)
 - Interactive filtering by year and state
 
-#### `Decarbonization Over Time.lvdash.json`
-Another dashboard configuration focusing on temporal trends in decarbonization metrics across different states.
 
 ### Animations
 #### `co2_emissions_animation_2.html`
