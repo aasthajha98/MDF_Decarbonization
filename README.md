@@ -62,6 +62,9 @@ A JSON configuration file for a **Databricks dashboard**. The dashboard includes
 #### `co2_emissions_animation_2.html`
 An interactive animation (rendered in HTML) showing the change in state-level CO₂ emissions from electricity generation over time. This helps visualize decarbonization dynamics across the country.
 
+#### `co2_emissions_animation_map.html`
+An interactive animation (rendered in HTML) showing the change in state-level CO₂ emissions from electricity generation over time across states.
+
 ### Cleaned Data
 #### `Decarbonization_data_updated.csv`
 The processed dataset containing cleaned and aggregated decarbonization metrics used for all analyses and visualizations in this project.
